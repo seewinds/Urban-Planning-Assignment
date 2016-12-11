@@ -55,10 +55,9 @@
     position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%;
     height: 100px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 16%;
     overflow: hidden;
 }
 

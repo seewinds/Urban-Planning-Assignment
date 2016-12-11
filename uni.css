@@ -1,0 +1,371 @@
+* {
+    font-family: PingFang SC, Helvetica, Microsoft Yahei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.16s ease 0.05s;
+    -moz-transition: all 0.16s ease 0.05s;
+    -webkit-transition: all 0.16s ease 0.05s;
+    -o-transition: all 0.16s ease 0.05s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.16s ease 0.05s;
+    -moz-transition: all 0.16s ease 0.05s;
+    -webkit-transition: all 0.16s ease 0.05s;
+    -o-transition: all 0.16s ease 0.05s;
+}
+
+.page {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100px;
+    display: block;
+    overflow: visible;
+    background: #26292e;
+    flex: 0 0 100px;
+}
+
+.h-container {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.h-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    max-width: 1000px;
+    padding: 30px 0 0;
+    overflow: hidden;
+}
+
+.h-row-1 {
+    flex: 0 0 142px;
+    -webkit-flex: 0 0 142px;
+    width: 142px;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.h-row-2 {
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    box-sizing: border-box;
+    height: 70px;
+    display: flex;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    padding-top: -10px;
+    box-sizing: border-box;
+}
+
+#thispath:hover {
+    fill: url(#a);
+    cursor: pointer;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.navigation {
+    font-size: 16px;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 80%;
+    margin: 10px auto -10px;
+}
+
+.navigation:hover {
+    cursor: pointer;
+}
+
+.navi-text {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.m-navi-text {
+    color: #ddd;
+    text-align: center;
+    z-index: 1100;
+    opacity: 1;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.navi-text:hover>.m-navi-text {
+    color: #eee;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.navi-under {
+    overflow: hidden;
+    width: 20px;
+    height: 3px;
+    z-index: 1004;
+    background-color: #ccc;
+    border-radius: 3px;
+    margin: -6px auto 0;
+    transform: translateY(0) translateZ(0);
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.navi-text:hover>.navi-under {
+    background-color: #eee;
+    width: 110px;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.o-navi-text {
+    color: #888;
+    text-align: center;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.navi-text:hover>.o-navi-text {
+    color: #eee;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.o-navi-under {
+    width: 20px;
+    height: 3px;
+    background-color: #888;
+    border-radius: 3px;
+    margin: -6px auto 0;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.navi-text:hover>.o-navi-under {
+    background-color: #eee;
+    width: 110px;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.content {
+    margin-top: -100px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.upper {
+    position: absolute;
+    width:  100%;
+    height: 400px;
+}
+
+.black-back {
+    background-color: #26292e;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.m-container {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 68%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 160px auto 0 auto;
+}
+
+.m-row {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+#container {
+    flex-basis: 50%;
+    position: relative!important;
+    width: 50%!important;
+    height: 360px!important;
+    display: inline-block;
+    box-shadow: 0 10px 80px -20px #699cd1;
+    border-radius: 2px;
+    z-index: 12;
+}
+
+.main-right {
+    flex-basis: 0;
+    height: 360px;
+    z-index: 13;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.main-right-container {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    width: 80%;
+    height: 100%;
+    margin: 0 0 0 auto;
+}
+
+.info {
+    position: relative;
+    color: white;
+    display: inline-block;
+    max-height: 240px;
+    height: 207px;
+    overflow: hidden;
+}
+
+.m-button {
+    width: 160px;
+    height: 66px;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #2f2400;
+    letter-spacing: 2px;
+    background-color: #fbbd01;
+    box-shadow: 0 2px 40px -4px #d09e07;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.m-button:hover {
+    background-color: #ffdb01;
+    box-shadow: 0 2px 60px -2px #d09e07;
+    cursor: pointer;
+    transition: all 0.2s ease 0.08s;
+    -moz-transition: all 0.2s ease 0.08s;
+    -webkit-transition: all 0.2s ease 0.08s;
+    -o-transition: all 0.2s ease 0.08s;
+}
+
+.m-content {
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+.result {
+    width: 60%;
+    max-width: 1000px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px 50px 50px 50px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease 0.1s;
+    -moz-transition: all 0.3s ease 0.1s;
+    -webkit-transition: all 0.3s ease 0.1s;
+    -o-transition: all 0.3s ease 0.1s;
+    z-index: 5
+}
+
+.result:hover {
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.12), 0 2px 10px 3px rgba(0, 0, 0, 0.09);
+    transition: all 0.3s ease 0.1s;
+    -moz-transition: all 0.3s ease 0.1s;
+    -webkit-transition: all 0.3s ease 0.1s;
+    -o-transition: all 0.3s ease 0.1s;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 76px;
+    background-color: #26292e;
+    color: #777;
+    z-index: 20;
+    display: inline-block;
+    box-sizing: border-box;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>坐标提取</title>
+    <link rel="stylesheet" href="uni.css"/>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+    <script type="text/javascript" src="address%20parser.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=189c6c688f62aa613d41374a399b1f61&plugin=AMap.Geocoder"></script>
+</head>
+
+<body>
+
+<div class="page">
+    <header class="header">
+        <div class="h-container">
+            <div class="h-row">
+                <div class="h-row-2">
+                    <a class="icon" href="https://github.com/seewinds/">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -13px;" viewBox="0 0 512 512">
+                            <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="90.2" y1="252.8" x2="447.4" y2="172.2">
+                                <stop offset="0" stop-color="#39F"></stop>
+                                <stop offset="1" stop-color="#59ACFF"></stop>
+                            </linearGradient>
+                            <path id="thispath" fill="gainsboro" d="M132.3 154L84 229.4l91.7 82 77.8-25.8L318 306l84.3-45 25.8-64-80.4-54.7-49.2 16.6-67-42.7-42.5 29.2"></path>
+                            <g fill="#FFF">
+                                <path d="M164.8 365c-3.2 4.5-8.5 7.3-14.4 7.3-9.8 0-17.7-8-17.7-17.8s8-17.8 17.7-17.8c6 0 11.2 3 14.4 7.3l-6 4c-2.4-2-5-3.5-8.4-3.5-5.5 0-10 4.5-10 10 0 5.6 4.5 10 10 10 3.4 0 5.6-1 8.3-3.4l6 4zM205.7 363.3v8h-29.3v-33.7h8.2v25.7h21zM250 354.6c0 9.8-8 17.8-17.8 17.8s-17.8-8-17.8-17.8 8-17.8 17.8-17.8c10 0 17.8 8 17.8 17.8zm-7.8 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zM294 337.6v16.6c0 11-7.6 18-17 18-9.8 0-17.4-7-17.4-18v-16.6h8.3v16.6c0 5.3 3.7 9.8 9 9.8 5 0 8.7-4.5 8.7-9.8v-16.6h8.3zM338.3 354.5c0 9.3-7.5 17-17 17h-16v-34h16c10.5 0 17 7.7 17 17zm-8 0c0-5-3.8-8.7-8-8.7h-8.8v17.5h8.7c4.2 0 8-3.8 8-8.8zM382.2 337.6L368 357.2v14.2h-10v-14.2l-14.4-19.6h10L363 350l9-12.4h10.2z"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="h-row-1">
+                    <div class="navigation">
+                        <a class="navi-text" href="station search.html">
+                            <p class="o-navi-text">公交站点查询</p>
+                            <div class="o-navi-under"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="h-row-1">
+                    <div class="navigation">
+                        <div class="navi-text">
+                            <p class="m-navi-text">地址坐标提取</p>
+                            <div class="navi-under"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-row-1">
+                    <div class="navigation">
+                        <a class="navi-text" href="coordinator%20converter.html">
+                            <p class="o-navi-text">火星坐标转换</p>
+                            <div class="o-navi-under"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="upper">
+            <div id="black-back" class="black-back"></div>
+        </div>
+
+        <div class="m-container">
+            <div class="m-row">
+                <div id="container" ></div>
+
+                <div class="main-right">
+                    <div class="main-right-container">
+                        <div id="info" class="info">
+                            <p id="title" style="font-size: 36px; letter-spacing: 3px; font-weight: bold;">地址坐标提取</p>
+                            <p id="intro" style="font-size: 16px; letter-spacing: 1px;">将Python爬虫抓取的房产地址信息转换成坐标。</p>
+                        </div>
+
+                        <div id="start_parsing" class="m-button" onclick="doit();">
+                            <p id="start_btn" style="text-align: center; vertical-align: middle;">开始提取</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="m-content">
+            <div id="show_status" class="result">
+                <p style="width: 20%; border-bottom: 3px solid #555; letter-spacing: 2px; font-weight: bold; padding-bottom: 10px; font-size: 20px;">提取结果</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <p style="text-align: center; margin-top: 28px; font-size: 16px;">
+                <span style="font-weight: bold; color: #ccc;">© Copyright 2016</span>
+                <span style="margin: 0px 5%;">Lü Cheng</span><span>Southeast University</span>
+            </p>
+        </div>
+    </footer>
+</div>
+
+    <script type="text/javascript">
+        var map = new AMap.Map("container", {
+            resizeEnable: true,
+            zoom: 11,
+            center: [118.77, 32.05]
+        });
+    </script>
+</body>
+
+</html>
